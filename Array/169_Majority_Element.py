@@ -1,6 +1,3 @@
-'''
-
-'''
 def majorityElement(nums):
     count_dict = {}
     for num in nums:
