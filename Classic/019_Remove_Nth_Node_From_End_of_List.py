@@ -3,7 +3,7 @@ Solution: Linked List & Two Pointers
 
 dummy
 -1    ->    1    ->    2    ->    3    ->    4    ->    5    ->    None
-fase
+fast
 slow
 -------
 讓 fast 先走 2 單位
