@@ -29,4 +29,4 @@ def merge(intervals):
 
     return result
 
-print(canJump([2,3,1,1,4])) # true
+print(merge([[1,3],[2,6],[8,10],[15,18]])) # [[1,6],[8,10],[15,18]]
