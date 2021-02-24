@@ -1,15 +1,11 @@
 '''
 Recursive:
-Case1.
+Base Tree:
 p is None && q is None -> return True
-
-Case2. 
 p is None || q is None -> return False
-
-Case3. 
 p.val != q.val -> return False
 
-Case4. 
+Recursive Left SubTree & Right SubTree: 
 isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 ----
 
@@ -20,6 +16,7 @@ isSameTree(2,2) and isSameTree(3,3)
 isSameTree(None,None) and isSameTree(None,None)
 '''
 def isSameTree(p, q):
+    # Base Tree Case:
     if p is None and q is None:
         return True
     
@@ -29,4 +26,5 @@ def isSameTree(p, q):
     if p.val != q.val:
         return False
     
+    # Recursive Tree 
     return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
