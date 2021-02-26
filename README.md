@@ -53,8 +53,21 @@ https://docs.google.com/spreadsheets/d/1YhwajjbZDVFHxEZS3k9z-LbWwe2LK8x5XIaFThKZ
   - Ask for subproblem result.
   - Do something in current level or recursion.
   - Return result
-   ```
+  ```
 
+
+### [Tree BFS](https://www.youtube.com/watch?v=jEg9AeN5a2Q&list=PLV5qT67glKSErHD66rKTfqerMYz9OaTOs&index=8&ab_channel=%E5%9B%BE%E7%81%B5%E6%98%9F%E7%90%83TuringPlanet)
+1. BFS (寬度優先搜尋演算法): 是按照 '層' 的概念進行搜尋算法
+2. 幾乎所有 BFS 題目都可以用 Queue 來記錄被展開的 TreeNode
+3. Pseudo Code: 
+  ```cmd
+  - Initialize Queue with tree root node.
+  - While Queue is not empty
+    - for each node in the current queue
+    - pull out the node
+    - expand the node, push children to the Queue in order
+    - increase level
+  ```
 
 ### Ref:   
 [[心得] COVID期間拿到Google FB 微軟 Offer](https://www.ptt.cc/bbs/Soft_Job/M.1605589986.A.CBA.html)  
