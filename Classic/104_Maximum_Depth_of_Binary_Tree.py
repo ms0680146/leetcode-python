@@ -15,7 +15,7 @@ BFS (寬度優先搜索)
 #         self.val = val
 #         self.left = left
 #         self.right = right
-def maxDepth(root):
+def maxDepthBFS(root):
     queue = []
     level = 0
     
@@ -34,4 +34,23 @@ def maxDepth(root):
             
         level += 1
     return level
-                
+
+'''
+DFS (深度優先搜索)
+Buttom Up DFS
+- Base Case
+- 向子問題要答案(return value)
+- 利用子問題的答案構建當前問題的答案
+- 返回答案給父問題
+'''
+def maxDepthDFS(root):
+    # Base Case
+    if root is None: 
+        return 0
+    # 向左右子樹的子問題要答案
+    leftLevel = maxDepthDFS(root.left)
+    rightLevel = maxDepthDFS(root.right)
+    # 利用子問題構建當前答案
+    max_level = max(leftLevel, rightLevel) + 1
+    # 返回答案給父問題
+    return max_level
