@@ -69,6 +69,57 @@ https://docs.google.com/spreadsheets/d/1YhwajjbZDVFHxEZS3k9z-LbWwe2LK8x5XIaFThKZ
     - increase level
   ```
 
+### [Tree DFS](https://www.youtube.com/watch?v=5jz66VkGMCY&list=PLV5qT67glKSErHD66rKTfqerMYz9OaTOs&index=9&ab_channel=%E5%9B%BE%E7%81%B5%E6%98%9F%E7%90%83TuringPlanet)
+1. DFS (深度優先搜尋演算法): 是依照 Recursive 的概念進行搜尋算法，偏向於垂直的概念
+2. DFS 分為三種: 
+   - Preorder Traversal
+   ```python
+   def dfs(node):
+      if node is None:
+          return
+      print(node.val)
+      dfs(node.left)
+      dfs(node.right)
+   ```
+   - Inorder Traversal
+   ```python
+   def dfs(node):
+      if node is None:
+          return
+      dfs(node.left)
+      print(node.val)
+      dfs(node.right)
+   ```
+   - Postorder Traversal
+   ```python
+   def dfs(node):
+      if node is None:
+          return
+      dfs(node.left)
+      dfs(node.right)
+      print(node.val)
+   ```
+4. Button Up DFS (建議從中間狀態構建思路):
+   - 把值從下(subproblem)往上傳遞
+   - 當前遞歸層利用subproblem 傳上來的計算當前層的新值並返回
+   - 一定有返回值
+   - Pseudo Code: 
+  ```cmd
+  - Base Case
+  - 向子問題要答案(return value)
+  - 利用子問題的答案構建當前問題的答案
+  - 返回答案給父問題
+ ```
+5. Top Down DFS:
+  - 把值透過參數的形式往下傳遞
+  - top down dfs 一般來說不返回值
+  - Pseudo Code: 
+  ```cmd
+  - Base Case
+  - 利用父問題傳下來的值做計算
+  - 把值傳給子問題做 recursion
+  ```
+  
 ### Ref:   
 [[心得] COVID期間拿到Google FB 微軟 Offer](https://www.ptt.cc/bbs/Soft_Job/M.1605589986.A.CBA.html)  
 [如何高效運用LeetCode | 我的secret spreadsheet](https://www.youtube.com/watch?v=ucTL2ZdcyOs&feature=emb_title&ab_channel=AHTech)
