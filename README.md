@@ -134,5 +134,6 @@ https://docs.google.com/spreadsheets/d/1YhwajjbZDVFHxEZS3k9z-LbWwe2LK8x5XIaFThKZ
 
 
 ### Ref:   
+[2020 前端工程師面試 準備與心得](https://yixuntseng-bruce.medium.com/2020%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E9%9D%A2%E8%A9%A6%E5%88%86%E4%BA%ABline-17live-binance-tiktok-bytedance-a9a7e01fd613)
 [[心得] COVID期間拿到Google FB 微軟 Offer](https://www.ptt.cc/bbs/Soft_Job/M.1605589986.A.CBA.html)  
 [如何高效運用LeetCode | 我的secret spreadsheet](https://www.youtube.com/watch?v=ucTL2ZdcyOs&feature=emb_title&ab_channel=AHTech)
