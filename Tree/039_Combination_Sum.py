@@ -1,5 +1,11 @@
 '''
-Solution: DFS(深度搜尋演算法)
+Solution: Top Down DFS(深度搜尋演算法)
+1. 把值透過參數的形式往下傳遞
+2. top down dfs 一般來說不返回值
+3. Pseudo Code:
+- Base Case
+- 利用父問題傳下來的值做計算
+- 把值傳給子問題做 recursion
 
 Input: candidates = [2,3,6,7], target = 7
 Output: [[2,2,3],[7]]
