@@ -84,29 +84,3 @@ def helper(s, len_s, memo):
         
     memo[len_s] = result
     return result 
-
-'''
-Button Up Dynamic Programming
-i: 1234
-s:'2112'
-f(0) = 1
-f(1) = 1
-f(2) = f(0) + f(1) = 2
-f(3) = f(1) + f(2) = 3
-'''
-def numDecodingsButtonUp(s):
-    dp = [0 for _ in range(len(s) + 1)]
-    dp[0] = 1
-    if s[0] == '0':
-        return 0
-    else:
-        dp[1] = 1
-    
-    for i in range(2, len(s) + 1): #'12' -> range(2, 3) -> 2
-        if s[i-1] != '0':
-            dp[i] = dp[i-1]
-        
-        if 10 <= int(s[i-2:i]) <= 26:
-            dp[i] += dp[i-2]
-    
-    return dp[len(s)]
