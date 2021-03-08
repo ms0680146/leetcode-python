@@ -1,5 +1,5 @@
 '''
-Solution: Two Pointers
+Solution: Two Pointers(反向)
 [1,8,6,2,5,4,8,3,7] -> len = 9
 判斷 left 和 right 哪邊比較高，留下比較高的，另一個往中間縮
 '''
