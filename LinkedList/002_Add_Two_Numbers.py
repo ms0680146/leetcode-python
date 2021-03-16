@@ -27,7 +27,7 @@ def addTwoNumbers(l1, l2):
         return l1
         
     # create dummy
-    dummy = ListNode(0)
+    dummy = ListNode(-1)
     result = dummy
     carry = 0 
 

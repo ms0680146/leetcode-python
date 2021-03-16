@@ -25,3 +25,19 @@ def maxSubArray(nums):
     return max_sum
 
 print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) # 6
+
+'''
+Brute Force Solution
+列出所有的可能subarray，比較其 sum 值大小。
+'''
+
+def maxSubArrayBruteForce(nums):
+    global_sum = float('-inf')
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)+1):
+            local_sum = sum(nums[i:j])
+            global_sum = max(global_sum, local_sum)
+    return global_sum
+
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) # 6
+    

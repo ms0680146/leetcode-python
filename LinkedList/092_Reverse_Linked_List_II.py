@@ -20,7 +20,7 @@ class ListNode:
 
 def reverseBetween(head, m, n):
     # create dummy
-    dummy = ListNode(0)
+    dummy = ListNode(-1)
     dummy.next = head
 
     # create pre

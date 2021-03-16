@@ -25,9 +25,9 @@ i=2 j=3 -> dp[2][3]
 def uniquePaths(m, n):
     # create m*n list.
     dp = [[1 for _ in range(m)] for _ in range(n)]
-    for i in range(1, n):
-        for j in range(1, m):
-            dp[i][j] = dp[i-1][j] + dp[i][j-1]
+    for i in range(1, n): # n=3, i=1,2
+      for j in range(1, m): # m=2, j=1
+        dp[i][j] = dp[i-1][j] + dp[i][j-1]
     print(dp)
     return dp[n-1][m-1]
 

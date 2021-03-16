@@ -18,9 +18,9 @@ def setZeroes(matrix):
                 col_record.append(col)
     
     for i in row_record:
-        for j in col_record:
-            setEntireRowToZero(i, matrix)
-            setEntireColToZero(j, matrix)
+        setEntireRowToZero(i, matrix)
+    for j in col_record:
+        setEntireColToZero(j, matrix)
 
 def setEntireRowToZero(row, matrix):
     for i in range(len(matrix[row])):
