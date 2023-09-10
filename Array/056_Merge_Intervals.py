@@ -10,23 +10,17 @@ Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 3. 若原本的區間尾 > 新進來的區間頭 -> 代表 Overlapping，更新原本的區間
 '''
 def merge(intervals):
-    result = []
-    intervals.sort(key=lambda x:x[0])
+    intervals.sort(key=lambda pair: pair[0])
+    output = [intervals[0]]
 
-    # intervals 沒有半個子區間或是只有一個子區間 -> 直接回傳 intervals
-    if len(intervals) == 0 or len(intervals) == 1:
-        return intervals
-    # intervals 至少有兩個子區間
-    result.append(intervals[0])
-    for i in range(1, len(intervals)): #1,2,3
-        pre_end = result[-1][1]
-        cur_start = intervals[i][0]
-        cur_end = intervals[i][1]
-        if pre_end >= cur_start:
-            result[-1][1] = max(pre_end, cur_end)
+    for start, end in intervals[1:]:
+        lastEnd = output[-1][1]
+
+        if start <= lastEnd:
+            # 若新進來的區間頭 <= 原本的區間尾, merge
+            output[-1][1] = max(lastEnd, end)
         else:
-            result.append(intervals[i])
-
-    return result
+            output.append([start, end])
+    return output
 
 print(merge([[1,3],[2,6],[8,10],[15,18]])) # [[1,6],[8,10],[15,18]]

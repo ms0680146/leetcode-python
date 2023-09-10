@@ -7,6 +7,7 @@ Solution: Two Pointers Collide
   i-->  
 [-4, -1, -1, 0, 1, 2]
       l-->      <--r
+https://www.youtube.com/watch?v=jzZsG8n2R9A
 '''
 def threeSum(nums):
     nums.sort()

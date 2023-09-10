@@ -1,10 +1,12 @@
 '''
 Solution: Pointer
+- input: [3,2,2,3]
+- removed element: 3
 
-pointer=0, [2,2,3], len=3-1
-pointer=0, [2,2,3], len=3-1, pointer+=1
-pointer=1, [2,2,3], len=3-1, pointer+=1
-pointer=2, [2,2], len=2-1
+pointer=0, [3,2,2,3], remove nums[0],  [2,2,3]
+pointer=0, [2,2,3], not remove, pointer+=1
+pointer=1, [2,2,3], not remove, pointer+=1
+pointer=2, [2,2,3], remove nums[2], [2,2]
 '''
 def removeElement(nums, val):
     pointer = 0
