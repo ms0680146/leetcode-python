@@ -17,3 +17,14 @@ def reverseList(head):
     head.next = None
     # 返回值給父問題
     return reversed_head
+
+
+def reverseList(self, head: ListNode) -> ListNode:
+    prev, curr = None, head
+
+    while curr:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+    return prev

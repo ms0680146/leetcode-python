@@ -6,19 +6,16 @@ if counter ), ], } -> pop from stack, check is pair or not.
 '''
 def isValid(s):
     stack = []
-    mapping = {')': '(', ']':'[', '}':'{'}
-
+    mapping = {')':'(', '}':'{', ']':'['}
+    
     for parentheses in s:
-        if parentheses in ['(', '[', '{' ]:
+        if parentheses in ['(', '{', '[']:
             stack.append(parentheses)
-        else: # three case: ), ], }
-            if len(stack) == 0:
-                return False
-            
-            if stack.pop() != mapping[parentheses]:
-                return False
-
-    return len(stack) == 0
+        elif len(stack) == 0:
+            return False
+        elif stack.pop() != mapping[parentheses]:
+            return False
+    return stack == []
 
 print(isValid("()")) # true
 print(isValid("()[]{}")) # true

@@ -16,15 +16,14 @@ Stack的Top會紀錄目前最新的字元，如果下1個字元和Top一樣，�
 
 def removeDuplicates(S):
     stack = []
-    for i in range(len(S)):
+    for char in s:
         if len(stack) == 0:
-            stack.append(S[i])
-        elif stack[-1] != S[i]:
-            stack.append(S[i])
+            stack.append(char)
+        elif stack[-1] != char:
+            stack.append(char)
         else:
             stack.pop(-1)
-            
-    answer = ''
-    for i in range(len(stack)):
-        answer += str(stack[i])
-    return answer
+    ans = ''
+    for char in stack:
+        ans += char
+    return ans
