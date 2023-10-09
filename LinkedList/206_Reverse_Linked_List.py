@@ -19,7 +19,7 @@ def reverseList(head):
     return reversed_head
 
 
-def reverseList(self, head: ListNode) -> ListNode:
+def reverseList(head: ListNode) -> ListNode:
     prev, curr = None, head
 
     while curr:

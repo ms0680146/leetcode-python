@@ -32,3 +32,13 @@ print(maxProfit([7,1,5,3,6,4])) # 5
 print(maxProfit([7,6,4,3,1])) # 0
 
 
+def maxProfitI(prices):
+    min_pointer = 0
+    max_profit = 0
+    for i in range(len(prices)):
+        if i > 0 and prices[i] > prices[min_pointer]:
+            profit = prices[i] - prices[min_pointer]
+            max_profit = max(profit, max_profit)
+        else:
+            min_pointer = i
+    return max_profit

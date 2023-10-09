@@ -4,9 +4,31 @@ Solution: Sliding Window + set
 sliding window + set
 s = 'abcbb'
      01234
-當 window_end 移動到3的時候char為b，此時，set = {a, b, c}中，window_start=0，char b在set中。
-所以在while loop中反覆移動 window_start，當 window_start 移動到2的位置時，此时set = {c},char b 已經不在set中。
-按照這個方式移動，set的個數最多的值即為最長substring。
+
+暴力法:
+a
+ab
+abc
+abcb --> 不用考慮
+abcbb --> 不用考慮
+b
+bc
+bcb --> 不用考慮
+bcbb --> 不用考慮
+c
+cb
+cbb --> 不用考慮
+b
+bb --> 不用考慮
+b
+
+當 window_end 移動到 3 的時候 char 為 b
+此時 set = {a, b, c} 中 window_start = 0 char b在 set 中
+所以在 while loop 中反覆移動 window_start
+當 window_start 移動到2的位置時
+此时 set = {c}, char b 已經不在 set 中
+按照這個方式移動
+set 的個數最多的值即為最長 substring
 '''
 def lengthOfLongestSubstring(s):
     charSet = set()

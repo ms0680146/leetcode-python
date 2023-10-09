@@ -25,3 +25,17 @@ def maxArea(nums):
 print(maxArea([1,1])) # 1
 print(maxArea([4,3,2,1,4])) # 16
 print(maxArea([1,2,1])) # 2
+
+
+'''
+brute force
+'''
+def maxAreaBruteForce(nums):
+    res = 0
+    for l in range(len(nums)):
+        for r in range(l+1, len(nums)):
+            button = r - l
+            height = min(nums[l], nums[r])
+            area = button * height
+            res = max(area, res)
+    return res

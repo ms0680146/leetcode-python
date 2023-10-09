@@ -33,7 +33,7 @@ def isPalindrome(s: str) -> bool:
         r -= 1
     return True
 
-def alphanum(self, c):
+def alphanum(c):
     return (ord('A') <= ord(c) <= ord('Z') or
         ord('a') <= ord(c) <= ord('z') or
         ord('0') <= ord(c) <= ord('9')

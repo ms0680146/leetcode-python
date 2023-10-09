@@ -18,12 +18,12 @@ def mergeTwoLists(l1, l2):
         return l1
     
     # create dummy
-    dummy = ListNode(-1)
+    dummy = ListNode()
     # create new linked list
     new = dummy
 
     # While loop compare two linked list.
-    while l1 != None and l2 != None:
+    while l1 and l2:
         if l1.val > l2.val:
             new.next = ListNode(l2.val)
             l2 = l2.next
@@ -32,10 +32,10 @@ def mergeTwoLists(l1, l2):
             l1 = l1.next
         new = new.next
     
-    if l1 != None:
+    if l1:
         new.next = l1
 
-    if l2 != None:
+    if l2:
         new.next = l2
     
     return dummy.next

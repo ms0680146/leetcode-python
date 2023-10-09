@@ -21,6 +21,7 @@ def threeSum(nums):
         if i > 0 and nums[i] == nums[i-1]: # skip duplicate (-4, -1, -1..)
             continue
         
+        # two sum II
         while l < r:
             three_sum = nums[i] + nums[l] + nums[r]
             if three_sum > 0:
@@ -33,7 +34,6 @@ def threeSum(nums):
                 r -= 1
                 while l < r and nums[l] == nums[l-1]:  # skip duplicate (-1, -1..)
                     l += 1
-
                 while l < r and  nums[r] == nums[r+1]:  # skip duplicate
                     r -= 1
     return result

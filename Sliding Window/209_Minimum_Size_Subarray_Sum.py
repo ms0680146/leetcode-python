@@ -30,17 +30,10 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
 43 --> greater than or equal 7
 
 ---------------------------------------------------------
-一開始 windowStart 指向 2，然後 windowEnd 會慢慢擴張，
-當擴張到 [2,3,1,2] 這個情況時，因為 sum 已經 >= 7，
-所以 windowStart 會開始右移。
-也就是說，原本暴力法會考慮的 [2,3,1,2,4] 跟 [2,3,1,2,4,3] 就不會被考慮到。
-
-就是因為這種情況，直觀下會覺得我們這樣不就少考慮到很多情況嗎？
-
-但大家可以再仔細想想，我們現在要求的是 sum >= s 的最小 subarray，
-如果 [2,3,1,2] 已經滿足條件了，
-我們繼續看 [2,3,1,2,4] 跟 [2,3,1,2,4,3] 又有什麼意義呢？
-畢竟這兩個 subarray 都大於 [2,3,1,2] 啊！
+一開始 windowStart 指向 2, 然後 windowEnd 會慢慢擴張
+當擴張到 [2,3,1,2] 這個情況時，因為 sum 已經 >= 7
+所以 windowStart 會開始右移
+也就是說，原本暴力法會考慮的 [2,3,1,2,4] 跟 [2,3,1,2,4,3] 就不會被考慮到
 '''
 def minSubArrayLen(target, nums):
     start = 0
